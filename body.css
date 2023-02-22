@@ -114,7 +114,7 @@ body{
 	bottom: 48px;
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 760px){
 	.box{
 		width: 320px;
 		height: 460px;
