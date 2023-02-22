@@ -1,0 +1,137 @@
+@font-face {
+	font-family: "BlackAcute";
+	src: url(fonts/BlackAcute.ttf);
+}
+@font-face {
+	font-family: "Daray";
+	src: url(fonts/Daray.ttf);
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	font-family: "Daray", sans-serif;
+}
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgb(125, 138, 126);
+}
+
+.box{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 640px;
+	height: 380px;
+	border-radius: 64px;
+	border: 8px solid rgb(245,245,245);
+	background: rgb(245,245,245);
+	box-shadow: inset -1px 0px 5px 2px rgb(207, 207, 207);
+}
+
+.box:before{
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: 120%;
+	height: 36px;
+	background: rgba(0, 0, 0, 0.19);
+	filter: blur(4px);
+	border-radius: 50%;
+	bottom: -16px;
+}
+.box:after{
+	content: "";
+	position: absolute;
+	z-index: -2;
+	width: 120%;
+	height: 48px;
+	background: rgba(88, 88, 88, 0.19);
+	filter: blur(8px);
+	border-radius: 50%;
+	bottom: -16px;
+}
+
+.inner-box{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 540px;
+	height: 270px;
+	border-radius: 16px;
+	background: url(images/image.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+}
+
+#weather{
+	position: absolute;
+	display: flex;
+	top: 24px;
+	left: 24px;
+	font-size: 30px;
+	font-weight: 600;
+	color: white;
+	align-items: center;
+	justify-content: center;
+}
+
+#icon img{
+	display: block;
+	width: 36px;
+}
+
+#degrees {
+	margin-left: 12px;
+}
+
+#time{
+	position: relative;
+	font-size: 120px;
+	color: #fff;
+	font-weight: 500;
+	white-space: nowrap;
+}
+
+.rewetka{
+	position: relative;
+	bottom: 20px;
+}
+
+#date{
+	position: absolute;
+	font-size: 24px;
+	color:#fff;
+	font-weight: 500;
+	bottom: 48px;
+}
+
+@media screen and (max-width: 680px){
+	.box{
+		width: 320px;
+		height: 460px;
+	}
+	
+	.inner-box{
+		width: 240px;
+		height: 360px;
+		border-radius: 24px;
+	}
+
+	#time{
+		font-size: 80px;
+	}
+
+	#weather{
+		top: 48px;
+		left: 48px;
+	}
+}
