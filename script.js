@@ -27,7 +27,7 @@ function updateDate(){
 }
 updateDate();
 
-const city = "jizzakh";
+const city = "Uzbekistan";
 const requestURL = "https://api.api-ninjas.com/v1/weather?city=" + city;
 
 function sendRequest(method, url) {
